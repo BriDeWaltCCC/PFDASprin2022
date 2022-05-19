@@ -1,0 +1,225 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/12/2022 6:54:56 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-PDFTDFK"
+  DTS:CreatorName="AzureAD\BrianDeWalt"
+  DTS:DTSID="{CBDF43FC-9E8E-48A8-99F2-D5B476C17175}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{3C3C3FE6-DF25-4569-9CA8-34006361C7D7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-PDFTDFK\MSSQLSERVER01.The_ACC_Store]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{287E0844-0C55-45FF-807F-3F00E7C5FDA1}"
+      DTS:ObjectName="DESKTOP-PDFTDFK\MSSQLSERVER01.The_ACC_Store">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-PDFTDFK\MSSQLSERVER01;Initial Catalog=The_ACC_Store;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B9DBD1AB-5B28-47FC-9CF7-E36C10115C71}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\BrianDeWalt\Downloads\COVID-19_Diagnostic_Laboratory_Testing__PCR_Testing__Time_Series.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state"
+              DTS:DTSID="{ACD59D69-E2F7-45E1-A998-4A718ADE9A14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state_name"
+              DTS:DTSID="{393ABB35-E20D-49CD-88BF-12EFC5EB640F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="state_fips"
+              DTS:DTSID="{04F57CB0-7728-420F-8F6F-068EA6736F79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fema_region"
+              DTS:DTSID="{6EDD5A6A-4361-4C17-A437-BDF3C2AC8B6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="overall_outcome"
+              DTS:DTSID="{C81269E6-24AF-4CDE-BF78-E2C3F5A39415}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date"
+              DTS:DTSID="{ED3D5D40-8D5A-4613-AABB-CF4E53D0BF11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="new_results_reported"
+              DTS:DTSID="{593FBA56-F2BC-4643-BF43-CD8FF25D494D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="total_results_reported"
+              DTS:DTSID="{C425D232-4A81-4074-BD7D-7C81F4E4593F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="geocoded_state"
+              DTS:DTSID="{BE93317F-CB49-4305-B4A8-B1EC8B701A85}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HTTP Connection Manager]"
+      DTS:CreationName="HTTP"
+      DTS:DTSID="{4B8238BD-26B5-4E8E-9EB1-5C0D92178BEC}"
+      DTS:ObjectName="HTTP Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="https://data.austintexas.gov/resource/9t4d-g238.csv">
+          <DTS:HttpConnection
+            DTS:ServerURL="https://data.austintexas.gov/resource/9t4d-g238.csv">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1BrOGpFtD0Or7xQNGw6SdwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABOX/377bd8FRFMvTOfoPsw2rv+85VW5YOcTQ1f4nxNdQAAAAAOgAAAAAIAACAAAAC8dIAARAc3fMgXXUPf23vXYL7Fz/pG7FT4FSMj3VNurxAAAABZa4g3Xj57NydxeJE21foAQAAAALAhs8MCDB8DXUGuYtglUxMhJ9Ht78GtLpukcDtU5xyWAzB5NI5qtHbCpkBcDcPimH1bAGz64IRM1mJ05FIeSXU</DTS:Property>
+            <DTS:Property
+              DTS:Name="ProxyPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1BrOGpFtD0Or7xQNGw6SdwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACaZ/yE/Q/2KZbgO9mRO/Rr5qAYXAzf2cgsx/ZvnctTcwAAAAAOgAAAAAIAACAAAACO0tKAWRCVZS0fJa1ZUblCi92bmKuPA7xVzGB97JjdGBAAAAAbCzDr4rPPmCuZ6DyxRafnQAAAABLk+CqYLr8zFeq19wGrmxG4fqrsNbzF5uICCq4778uy6t3Mwughdj7bsBaUwJmQ/Tst6sHpLGHSHadlNGDEHnM</DTS:Property>
+          </DTS:HttpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[My SQL Server]"
+      DTS:CreationName="ADO.NET:SQL"
+      DTS:DTSID="{2D253B25-C64A-423A-91AC-BAB321DE892D}"
+      DTS:ObjectName="My SQL Server">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-PDFTDFK\MSSQLSERVER01;Integrated Security=SSPI;Connect Timeout=30;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Outlook]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{1F71C02A-91CF-4080-84E3-8C61510D4B12}"
+      DTS:ObjectName="Outlook">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=smtp-mail.outlook.com;UseWindowsAuthentication=True;EnableSsl=True;"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[test.csv]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{3627DC0B-FD2A-48F0-B8D4-552A974722F0}"
+      DTS:ObjectName="test.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Users\BrianDeWalt\Downloads\test.csv" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{08FF1F2C-AFF4-4E2C-8F22-D09A45AE709B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="260,127" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
